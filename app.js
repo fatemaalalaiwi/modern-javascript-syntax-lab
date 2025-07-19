@@ -118,50 +118,50 @@ console.log(duplicateArray);
 console.log(originalArray); 
 // Prints: [1, 2, 3]
 
-// *********enother Example**********************************************
-const fruits = ['apple', 'orange', 'banana'];
-const vegetables = ['broccoli', 'carrot', 'spinach'];
+// *********enother Example***************************************
+// const fruits = ['apple', 'orange', 'banana'];
+// const vegetables = ['broccoli', 'carrot', 'spinach'];
 
-const fruitsAndVegetables = [...fruits, ...vegetables];
+// const fruitsAndVegetables = [...fruits, ...vegetables];
 
-console.log(fruitsAndVegetables); 
-// Prints: ['apple', 'orange', 'banana', 'broccoli', 'carrot', 'spinach']
+// console.log(fruitsAndVegetables); 
+// // Prints: ['apple', 'orange', 'banana', 'broccoli', 'carrot', 'spinach']
 
 
-// *********Exercise 4: **********************************************
-// ! Exercise 4: 
-// a. Duplicate the provided `morePizzaToppings` array using the spread 
-//    operator and assign it to a variable named `uncontroversialPizzaToppings`.
-// 
-// b. Console log the `uncontroversialPizzaToppings` variable.
-//
-// Starting code (don't modify this):
+// // *********Exercise 4: ************************************************************************
+// // ! Exercise 4: 
+// // a. Duplicate the provided `morePizzaToppings` array using the spread 
+// //    operator and assign it to a variable named `uncontroversialPizzaToppings`.
+// // 
+// // b. Console log the `uncontroversialPizzaToppings` variable.
+// //
+// // Starting code (don't modify this):
 
-const morePizzaToppings = ['Cheese', 'Sauce'];
-const uncontroversialPizzaToppings = [...morePizzaToppings]
+// const morePizzaToppings = ['Cheese', 'Sauce'];
+// const uncontroversialPizzaToppings = [...morePizzaToppings]
 
-console.log(uncontroversialPizzaToppings)
+// console.log(uncontroversialPizzaToppings)
 
-// *********Applying the spread operator on objects**********************************************
-const originalObject = {
-  foo: 'Hello',
-  bar: 100,
-};
+// // *********Applying the spread operator on objects*********************
+// const originalObject = {
+//   foo: 'Hello',
+//   bar: 100,
+// };
 
-const clonedObject = { ...originalObject };
-console.log('Clone: ', clonedObject); 
-// Prints: { foo: 'Hello', bar: 100 }
+// const clonedObject = { ...originalObject };
+// console.log('Clone: ', clonedObject); 
+// // Prints: { foo: 'Hello', bar: 100 }
 
-// The use of the spread operator here differs significantly from direct assignment:
-const originalObject = {
-  foo: 'Hello',
-  bar: 100,
-};
+// // The use of the spread operator here differs significantly from direct assignment:
+// const originalObject = {
+//   foo: 'Hello',
+//   bar: 100,
+// };
 
-const clonedObject = originalObject;
-clonedObject.foo = 'Goodbye';
+// const clonedObject = originalObject;
+// clonedObject.foo = 'Goodbye';
 
-console.log(originalObject); 
+// console.log(originalObject); 
 // Prints: { foo: 'Goodbye', bar: 100 }
 
 // The example above demonstrates a pitfall of attempting to clone an object without the spread operator. When clonedObject is assigned originalObject directly, it doesn’t create a new, independent object. This behavior is identical to not using the spread operator to duplicate an array.
@@ -170,25 +170,26 @@ console.log(originalObject);
 
 // Like with arrays, this issue can be remedied when we apply the spread operator:
 
-const originalObject = {
-  foo: 'Hello',
-  bar: 100,
-};
+// const originalObject = {
+//   foo: 'Hello',
+//   bar: 100,
+// };
 
-// Copy the properties of `originalObject`:
-const clonedObject = { ...originalObject };
+// // Copy the properties of `originalObject`:
+// const clonedObject = { ...originalObject };
 
-// Update the properties of `clonedObject`:
-clonedObject.foo = 'Goodbye';
-clonedObject.bar = 0;
+// // Update the properties of `clonedObject`:
+// clonedObject.foo = 'Goodbye';
+// clonedObject.bar = 0;
 
-console.log('Original: ', originalObject);
-// Prints: { foo: 'Hello', bar: 100 }
-console.log('Clone: ', clonedObject);
+// console.log('Original: ', originalObject);
+// // Prints: { foo: 'Hello', bar: 100 }
+// console.log('Clone: ', clonedObject);
+
 // Prints: { foo: 'Goodbye', bar: 0 }
 // With the spread operator, clonedObject is a brand new object with a separate copy of the data from originalObject. Now, modifying clonedObject will not impact the originalObject
 
-// *********Exercise 5: **********************************************
+// *********Exercise 5: ************************************************************************
 // ! Exercise 5:
 // a. Duplicate the provided `anotherCar` object and spread its values into a 
 //    new variable named `myCar`.
@@ -198,7 +199,7 @@ console.log('Clone: ', clonedObject);
 //
 // c. Console log both objects and observe the results.
 //
-// Starting code (don't modify this):
+
 
 const anotherCar = {
   make: 'Toyota',
@@ -207,3 +208,13 @@ const anotherCar = {
 
 // Your code here:
 
+const myCar = {...anotherCar};
+
+myCar.make= 'Honda';
+myCar.model= 'Accord';
+
+console.log('anotherCar' , anotherCar);
+console.log('myCar' , myCar);
+
+
+// *********Exercise 6: ************************************************************************

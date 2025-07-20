@@ -1,0 +1,23 @@
+{
+  "name": "modern-javascript-syntax-lab",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatemaalalaiwi/modern-javascript-syntax-lab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fatemaalalaiwi/modern-javascript-syntax-lab/issues"
+  },
+  "homepage": "https://github.com/fatemaalalaiwi/modern-javascript-syntax-lab#readme",
+  "description": "",
+  "type": "module"
+
+}
+
